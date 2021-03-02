@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 535, y: 492}
   m_MaxSize: {x: 18005, y: 14042}
   vertical: 1
-  controlID: 35
+  controlID: 76
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 36
+  controlID: 77
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 535, y: 271}
   m_MaxSize: {x: 18005, y: 10021}
   vertical: 0
-  controlID: 121
+  controlID: 56
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -471,7 +471,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3afbffff
+      m_ExpandedIDs: eebeffff96faffff72fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -531,9 +531,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.3029966, y: 2.2282178, z: 1.8126636}
+    m_Target: {x: 11.970933, y: -7.021141, z: -1.4007626}
     speed: 2
-    m_Value: {x: -2.3029966, y: 2.2282178, z: 1.8126636}
+    m_Value: {x: 11.970933, y: -7.021141, z: -1.4007626}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -579,13 +579,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.057509802, y: 0.850248, z: -0.09503359, w: -0.5145291}
+    m_Target: {x: -0.00385549, y: -0.8696946, z: 0.49370545, w: -0.0071090246}
     speed: 2
-    m_Value: {x: -0.057367165, y: 0.85101855, z: -0.095119715, w: -0.513253}
+    m_Value: {x: -0.0038657994, y: -0.86887527, z: 0.49496514, w: -0.0071025994}
   m_Size:
-    m_Target: 10
+    m_Target: 29.036314
     speed: 2
-    m_Value: 10
+    m_Value: 27.785946
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -739,11 +739,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: "D:\\Program files\\Codespace\\Geekbrains\\NewHomework\\\u041D\u043E\u0432\u0430\u044F
     \u043F\u0430\u043F\u043A\u0430\\Rock'n'Roll"
@@ -751,9 +751,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 203c0000
-    m_LastClickedID: 15392
-    m_ExpandedIDs: 00000000203c000000ca9a3b
+    m_SelectedIDs: 06350000
+    m_LastClickedID: 13574
+    m_ExpandedIDs: 000000008633000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -781,7 +781,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 40340000
     m_LastClickedID: 13376
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000086330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -808,22 +808,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300008259000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Prefabs
+      m_OriginalName: Prefabs
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 13574
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
