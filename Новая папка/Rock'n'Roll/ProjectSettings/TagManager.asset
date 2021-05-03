@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - UnpassableWall
+  - Observer
   layers:
   - Default
   - TransparentFX
