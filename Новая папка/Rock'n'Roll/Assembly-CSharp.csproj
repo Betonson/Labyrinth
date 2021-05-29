@@ -71,6 +71,8 @@
     <Compile Include="Assets\Code\GameController.cs" />
     <Compile Include="Assets\Code\GoodBonus.cs" />
     <Compile Include="Assets\Code\IAction.cs" />
+    <Compile Include="Assets\Code\IDisposable.cs" />
+    <Compile Include="Assets\Code\IFlicker.cs" />
     <Compile Include="Assets\Code\IInitialisation.cs" />
     <Compile Include="Assets\Code\IInteractable.cs" />
     <Compile Include="Assets\Code\InteractiveObject.cs" />

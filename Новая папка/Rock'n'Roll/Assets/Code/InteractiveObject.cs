@@ -21,11 +21,11 @@ namespace RockAndRoll
             Action();
         }
 
-        public void Action()
+        public virtual void Action()
         {
             if (TryGetComponent(out Renderer renderer))
             {
-                renderer.material.color = Random.ColorHSV();
+                //renderer.material.color = Random.ColorHSV();
             }
         }
     }
