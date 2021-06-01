@@ -4,23 +4,29 @@ using UnityEngine;
 
 namespace RockAndRoll
 {
-    public class DoorObserver : MonoBehaviour
+    public class DoorObserver : InteractiveObject
     {
+        [SerializeField] private GameObject _doorModel;
         public bool _playerInRange = false;
-        void OnTriggerEnter(Collider other)
+        private DoorController _doorController;
+
+        private void Awake()
         {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                _playerInRange = true;
-            }
+            _doorController = _doorModel.GetComponent<DoorController>();
+        }
+        protected override void OnEnterInteraction()
+        {
+            _playerInRange = true;
         }
 
-        void OnTriggerExit(Collider other)
+        protected override void OnExitInteraction()
         {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                _playerInRange = false;
-            }
+            _playerInRange = false;
+        }
+        public override void Action()
+        {
+            base.Action();
+            _doorController.MoveDoor(_playerInRange);
         }
     }
 }

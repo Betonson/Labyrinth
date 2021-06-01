@@ -10,16 +10,21 @@ namespace RockAndRoll {
             _displayBonuses = new DisplayBonuses();
             _material = GetComponent<Renderer>().material;
         }
-        protected override void Interaction()
+        protected override void OnEnterInteraction()
         {
             _displayBonuses.Display(5);
+            Destroy(gameObject);
+        }
+
+        protected override void OnExitInteraction()
+        {
+            
         }
 
         public void Flicker()
         {
             //_material.color = new Color(_material.color.r, _material.color.g, _material.color.b, Mathf.PingPong(Time.time, 1.0f));
             _material.color = Random.ColorHSV();
-            Debug.Log("Flickering");
         }
 
         public override void Action()

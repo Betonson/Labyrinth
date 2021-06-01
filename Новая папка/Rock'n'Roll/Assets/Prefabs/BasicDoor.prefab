@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8a35c596d4e574d9632de59fdc3168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _doorObserver: {fileID: 4583006660042226066}
+  _doorObserverObject: {fileID: 4583006660042226066}
   _openPosition: {fileID: 4583006661680413368}
   _closedPosition: {fileID: 4583006660875842806}
   _doorSpeed: 10
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fac7eaa7a69a746b9d522ee4eebf24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _doorModel: {fileID: 279645551636671857}
   _playerInRange: 0
 --- !u!1 &4583006660174063245
 GameObject:
