@@ -26,10 +26,10 @@ namespace RockAndRoll
         }
         private void Start()
         {
-            Action();
+            CustomUpdate();
         }
 
-        public virtual void Action()
+        public virtual void CustomUpdate()
         {
             
         }

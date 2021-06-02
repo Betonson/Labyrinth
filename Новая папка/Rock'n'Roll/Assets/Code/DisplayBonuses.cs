@@ -5,12 +5,10 @@ namespace RockAndRoll
 {
     public class DisplayBonuses
     {
-        private GameObject _bonusDisplayText;
         private Text _text;
         public DisplayBonuses()
         {
-            _bonusDisplayText = GameObject.FindGameObjectWithTag("BonusDisplayText");
-            _text = _bonusDisplayText.GetComponent<Text>();
+            _text = GameObject.FindGameObjectWithTag("BonusDisplayText").GetComponent<Text>();
         }
         public void Display(int value)
         {

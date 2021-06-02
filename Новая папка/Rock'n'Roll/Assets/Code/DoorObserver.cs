@@ -23,9 +23,9 @@ namespace RockAndRoll
         {
             _playerInRange = false;
         }
-        public override void Action()
+        public override void CustomUpdate()
         {
-            base.Action();
+            base.CustomUpdate();
             _doorController.MoveDoor(_playerInRange);
         }
     }
