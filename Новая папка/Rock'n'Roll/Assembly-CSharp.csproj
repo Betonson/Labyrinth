@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\BadBonus.cs" />
     <Compile Include="Assets\Code\CameraController.cs" />
     <Compile Include="Assets\Code\DisplayBonuses.cs" />
     <Compile Include="Assets\Code\DoorController.cs" />
@@ -74,12 +75,15 @@
     <Compile Include="Assets\Code\GoodBonus.cs" />
     <Compile Include="Assets\Code\IDisposable.cs" />
     <Compile Include="Assets\Code\IFlicker.cs" />
+    <Compile Include="Assets\Code\IFly.cs" />
     <Compile Include="Assets\Code\IInitialisation.cs" />
     <Compile Include="Assets\Code\IInteractable.cs" />
-    <Compile Include="Assets\Code\IUpdate.cs" />
+    <Compile Include="Assets\Code\IPatrolling.cs" />
+    <Compile Include="Assets\Code\IUpdatable.cs" />
     <Compile Include="Assets\Code\InteractiveObject.cs" />
     <Compile Include="Assets\Code\Player.cs" />
     <Compile Include="Assets\Code\PlayerBall.cs" />
+    <Compile Include="Assets\Code\SceneSwitcher.cs" />
     <Compile Include="Assets\Code\UpdatableObject.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Program files/Codespace/Geekbrains/NewHomework/Новая папка/Rock'n'Roll/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
