@@ -8,11 +8,12 @@ namespace RockAndRoll
         private Text _text;
         public DisplayBonuses()
         {
-            _text = Object.FindObjectOfType<Text>();
+            _text = GameObject.FindGameObjectWithTag("BonusDisplayText").GetComponent<Text>();
         }
         public void Display(int value)
         {
-            _text.text = $"Вы набрали {value}";
+            //Debug.Log($"Вы набрали {value}");
+            _text.text = $"Points: {value}";
         }
     }
 }

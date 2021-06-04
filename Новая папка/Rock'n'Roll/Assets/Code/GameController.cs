@@ -21,6 +21,10 @@ namespace RockAndRoll
                 {
                     continue;
                 }
+                if(interactiveObject is IUpdatable)
+                {
+                    interactiveObject.CustomUpdate();
+                }
             }
         }
     }

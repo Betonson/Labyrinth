@@ -1,6 +1,6 @@
 ﻿namespace RockAndRoll
 {
-    public interface IInteractable : IAction, IInitialisation
+    public interface IInteractable : IUpdatable
     {
         bool IsInteractable { get; }
     }
