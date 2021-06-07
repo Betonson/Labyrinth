@@ -920,6 +920,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1319632795}
     m_Modifications:
+    - target: {fileID: 4583006660042226065, guid: 77588d35a0487f14a9aa767958dc7d91,
+        type: 3}
+      propertyPath: _bonusesLeftToUnlock
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4583006660174063245, guid: 77588d35a0487f14a9aa767958dc7d91,
         type: 3}
       propertyPath: m_Name
@@ -1954,6 +1959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659470709}
   - component: {fileID: 659470710}
+  - component: {fileID: 659470711}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -1989,6 +1995,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &659470711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659470708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbcf1de6ea0b7754abbbb6996cec14e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &667245857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2269,6 +2287,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1319632795}
     m_Modifications:
+    - target: {fileID: 4583006660042226065, guid: 77588d35a0487f14a9aa767958dc7d91,
+        type: 3}
+      propertyPath: _bonusesLeftToUnlock
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4583006660174063245, guid: 77588d35a0487f14a9aa767958dc7d91,
         type: 3}
       propertyPath: m_Name
@@ -3157,7 +3180,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &1069410049
 SphereCollider:
@@ -3226,13 +3249,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069410046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000104308114}
   m_LocalPosition: {x: 1.12, y: 0.547, z: 9.08}
   m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
 --- !u!1001 &1074018748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3562,6 +3585,7 @@ GameObject:
   - component: {fileID: 1203393654}
   - component: {fileID: 1203393653}
   - component: {fileID: 1203393652}
+  - component: {fileID: 1203393655}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3631,18 +3655,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1203393653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 131539634}
-        m_MethodName: RestartLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1203393653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3679,6 +3692,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203393650}
   m_CullTransparentMesh: 0
+--- !u!114 &1203393655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203393650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127575e642904724aacdeb519f97c6e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1210364413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4407,6 +4432,7 @@ MonoBehaviour:
   _gameOverScreen: {fileID: 1012614979}
   _VictoryScreen: {fileID: 1311150651}
   _displayBonusText: {fileID: 1675704984}
+  essentialBonusesAmount: 0
 --- !u!1 &1437756910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4867,7 +4893,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 
 --- !u!222 &1675704985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5468,6 +5494,7 @@ GameObject:
   - component: {fileID: 1783159296}
   - component: {fileID: 1783159295}
   - component: {fileID: 1783159294}
+  - component: {fileID: 1783159297}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -5537,18 +5564,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1783159295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 131539634}
-        m_MethodName: RestartLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1783159295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5585,6 +5601,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783159292}
   m_CullTransparentMesh: 0
+--- !u!114 &1783159297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783159292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127575e642904724aacdeb519f97c6e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1787079067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6558,6 +6586,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1319632795}
     m_Modifications:
+    - target: {fileID: 4583006660042226065, guid: 77588d35a0487f14a9aa767958dc7d91,
+        type: 3}
+      propertyPath: _bonusesLeftToUnlock
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4583006660174063245, guid: 77588d35a0487f14a9aa767958dc7d91,
         type: 3}
       propertyPath: m_Name

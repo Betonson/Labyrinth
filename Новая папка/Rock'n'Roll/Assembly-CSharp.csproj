@@ -64,26 +64,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\BadBonus.cs" />
+    <Compile Include="Assets\Code\Bonuses\BadBonus.cs" />
+    <Compile Include="Assets\Code\Bonuses\EssentialBonus.cs" />
+    <Compile Include="Assets\Code\Bonuses\GoodBonus.cs" />
     <Compile Include="Assets\Code\CameraController.cs" />
-    <Compile Include="Assets\Code\DisplayBonuses.cs" />
     <Compile Include="Assets\Code\DoorController.cs" />
     <Compile Include="Assets\Code\DoorObserver.cs" />
-    <Compile Include="Assets\Code\EssentialBonus.cs" />
+    <Compile Include="Assets\Code\Exit.cs" />
     <Compile Include="Assets\Code\GameController.cs" />
     <Compile Include="Assets\Code\GameMaster.cs" />
-    <Compile Include="Assets\Code\GoodBonus.cs" />
-    <Compile Include="Assets\Code\IDisposable.cs" />
-    <Compile Include="Assets\Code\IFlicker.cs" />
-    <Compile Include="Assets\Code\IFly.cs" />
-    <Compile Include="Assets\Code\IInitialisation.cs" />
-    <Compile Include="Assets\Code\IInteractable.cs" />
-    <Compile Include="Assets\Code\IPatrolling.cs" />
-    <Compile Include="Assets\Code\IUpdatable.cs" />
     <Compile Include="Assets\Code\InteractiveObject.cs" />
+    <Compile Include="Assets\Code\Interfaces\IDisposable.cs" />
+    <Compile Include="Assets\Code\Interfaces\IFlicker.cs" />
+    <Compile Include="Assets\Code\Interfaces\IFly.cs" />
+    <Compile Include="Assets\Code\Interfaces\IInitialisation.cs" />
+    <Compile Include="Assets\Code\Interfaces\IInteractable.cs" />
+    <Compile Include="Assets\Code\Interfaces\IPatrolling.cs" />
+    <Compile Include="Assets\Code\Interfaces\IUpdatable.cs" />
     <Compile Include="Assets\Code\Player.cs" />
     <Compile Include="Assets\Code\PlayerBall.cs" />
-    <Compile Include="Assets\Code\SceneSwitcher.cs" />
+    <Compile Include="Assets\Code\UI controllers\DisplayBonuses.cs" />
+    <Compile Include="Assets\Code\UI controllers\RestartButton.cs" />
+    <Compile Include="Assets\Code\UI controllers\SceneSwitcher.cs" />
     <Compile Include="Assets\Code\UpdatableObject.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Program files/Codespace/Geekbrains/NewHomework/Новая папка/Rock'n'Roll/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
