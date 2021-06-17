@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace RockAndRoll
 {
@@ -8,6 +9,13 @@ namespace RockAndRoll
         public delegate void OnEssentialBonusContact(object value);
         public event OnEssentialBonusContact EssentialBonusContact;
 
+        private IEnumerator DestroyThisObject()
+        {
+            IsInteractable = false;
+            yield return new WaitForEndOfFrame();
+            Destroy(gameObject);
+        }
+
         private float _lengthFly = 0.5f;
         private void Awake()
         {
@@ -16,7 +24,7 @@ namespace RockAndRoll
         protected override void OnEnterInteraction()
         {
             EssentialBonusContact?.Invoke(this);
-            Destroy(gameObject);
+            StartCoroutine(DestroyThisObject());
         }
 
         protected override void OnExitInteraction()
@@ -32,6 +40,7 @@ namespace RockAndRoll
         }
         public override void CustomUpdate()
         {
+            if (!IsInteractable) { return; }
             base.CustomUpdate();
             Fly();
         }

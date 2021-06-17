@@ -1,4 +1,5 @@
-﻿namespace RockAndRoll
+﻿
+namespace RockAndRoll
 {
     public interface IDisposable
     {
