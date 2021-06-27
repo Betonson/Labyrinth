@@ -4,14 +4,24 @@ using UnityEngine;
 
 namespace RockAndRoll
 {
-    public sealed class GameController : MonoBehaviour
+    public sealed class GameController : MonoBehaviour, IDisposable
     {
-        private InteractiveObject[] _interactiveObjects;
+        private ListUpdatableObject _interactiveObjects;
+        private InputController _inputController;
+        private CameraController _cameraController;
         private GameMaster _gameMaster;
         public void Awake()
         {
             _gameMaster = FindObjectOfType<GameMaster>();
-            _interactiveObjects = FindObjectsOfType<InteractiveObject>();
+            _interactiveObjects = new ListUpdatableObject();
+
+            var reference = new Reference();
+            _cameraController = new CameraController(reference.PlayerBall.transform, reference.MainCamera.transform);
+            _interactiveObjects.AddUpdatableObject(_cameraController);
+
+            _inputController = new InputController(reference.PlayerBall);
+            _interactiveObjects.AddUpdatableObject(_inputController);
+
             foreach (var objct in _interactiveObjects)
             {
                 if (objct is BadBonus badBonus)
@@ -47,12 +57,10 @@ namespace RockAndRoll
                 var interactiveObject = _interactiveObjects[i];
                 if (interactiveObject == null)
                 {
+                    Debug.Log("Test1");
                     continue;
                 }
-                if(interactiveObject is IUpdatable)
-                {
-                    interactiveObject.CustomUpdate();
-                }
+                interactiveObject.CustomUpdate();
             }
         }
         public void Dispose()

@@ -2,6 +2,6 @@
 {
     public interface IInteractable : IUpdatable
     {
-        bool IsInteractable { get; }
+        bool IsInteractable { get; set; }
     }
 }

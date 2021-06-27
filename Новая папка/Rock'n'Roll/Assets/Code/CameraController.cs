@@ -2,20 +2,23 @@
 
 namespace RockAndRoll
 {
-    public class CameraController : MonoBehaviour
+    public class CameraController: IUpdatable
     {
-        public Player Player;
+        private Transform _player;
+        private Transform _mainCamera;
         private Vector3 _offset;
 
-        private void Start()
+        public CameraController(Transform player, Transform mainCamera)
         {
-            _offset = transform.position - Player.transform.position;
+            _player = player;
+            _mainCamera = mainCamera;
+            //_mainCamera.LookAt(_player);
+            _offset = _mainCamera.position - _player.position;
         }
 
-        
-        private void LateUpdate()
+        public void CustomUpdate()
         {
-            transform.position = Player.transform.position + _offset;
+            _mainCamera.position = _player.position + _offset;
         }
     }
 }
