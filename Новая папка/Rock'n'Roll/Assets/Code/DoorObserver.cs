@@ -4,23 +4,45 @@ using UnityEngine;
 
 namespace RockAndRoll
 {
-    public class DoorObserver : MonoBehaviour
+    public class DoorObserver : InteractiveObject
     {
+        [SerializeField] private GameObject _doorModel;
+        [SerializeField] private float _bonusesLeftToUnlock;
         public bool _playerInRange = false;
-        void OnTriggerEnter(Collider other)
+        private DoorController _doorController;
+        private Material _doorMaterial;
+        private GameMaster _gameMaster;
+        private bool _isLocked = true;
+
+        private void Awake()
         {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                _playerInRange = true;
-            }
+            _gameMaster = FindObjectOfType<GameMaster>();
+            _doorController = _doorModel.GetComponent<DoorController>();
+            _doorMaterial = _doorModel.GetComponent<Renderer>().material;
+            _doorMaterial.color = Color.red;
+        }
+        protected override void OnEnterInteraction()
+        {
+            _playerInRange = true;
         }
 
-        void OnTriggerExit(Collider other)
+        protected override void OnExitInteraction()
         {
-            if (other.gameObject.CompareTag("Player"))
+            _playerInRange = false;
+        }
+        public void OnEssentialBonusPickup()
+        {
+            if (_bonusesLeftToUnlock >= _gameMaster.essentialBonusesAmount)
             {
-                _playerInRange = false;
+                _doorMaterial.color = Color.white;
+                _isLocked = false;
             }
+        }
+        public override void CustomUpdate()
+        {
+            base.CustomUpdate();
+
+            _doorController.MoveDoor(_playerInRange, _isLocked);
         }
     }
 }

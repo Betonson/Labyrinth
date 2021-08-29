@@ -1,33 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RockAndRoll
 {
     public class DoorController : MonoBehaviour
     {
-        [SerializeField] private GameObject _doorObserver;
+        //[SerializeField] private GameObject _doorObserverObject;
+        //private DoorObserver _doorObserver;
+        //[SerializeField] private bool _playerInRange = false;
         [SerializeField] private Transform _openPosition;
         [SerializeField] private Transform _closedPosition;
         [SerializeField] private float _doorSpeed = 10.0f;
 
-        private void Update()
+        public void MoveDoor(bool playerInRange, bool isLocked)
         {
-            var observer = _doorObserver.gameObject.GetComponent<DoorObserver>();
-            if (observer._playerInRange == true)
+            //var observer = _doorObserver.gameObject.GetComponent<DoorObserver>();
+            if (!isLocked)
             {
-                if (transform.position != _openPosition.position)
+                if (playerInRange == true)
                 {
-                    transform.position -= (transform.position - _openPosition.position) * _doorSpeed * Time.deltaTime;
+                    if (transform.position != _openPosition.position)
+                    {
+                        transform.position -= (transform.position - _openPosition.position) * _doorSpeed * Time.deltaTime;
+                    }
                 }
-            }
-            if (observer._playerInRange == false)
-            {
-                if (transform.position != _closedPosition.position)
+                if (playerInRange == false)
                 {
-                    transform.position -= (transform.position - _closedPosition.position) * _doorSpeed * Time.deltaTime;
+                    if (transform.position != _closedPosition.position)
+                    {
+                        transform.position -= (transform.position - _closedPosition.position) * _doorSpeed * Time.deltaTime;
+                    }
                 }
             }
         }
+
     }
 }

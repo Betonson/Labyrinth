@@ -4,8 +4,9 @@ namespace RockAndRoll
 {
     public abstract class InteractiveObject : MonoBehaviour, IInteractable
     {
-        public bool IsInteractable { get; } = true;
-        protected abstract void Interaction();
+        public bool IsInteractable { get; set; } = true;
+        protected abstract void OnEnterInteraction();
+        protected abstract void OnExitInteraction();
 
         private void OnTriggerEnter(Collider other)
         {
@@ -13,20 +14,24 @@ namespace RockAndRoll
             {
                 return;
             }
-            Interaction();
-            Destroy(gameObject);
+            OnEnterInteraction();
+        }
+        private void OnTriggerExit(Collider other)
+        {
+            if (!IsInteractable || !other.CompareTag("Player"))
+            {
+                return;
+            }
+            OnExitInteraction();
         }
         private void Start()
         {
-            Action();
+            CustomUpdate();
         }
 
-        public void Action()
+        public virtual void CustomUpdate()
         {
-            if (TryGetComponent(out Renderer renderer))
-            {
-                renderer.material.color = Random.ColorHSV();
-            }
+            
         }
     }
 }
