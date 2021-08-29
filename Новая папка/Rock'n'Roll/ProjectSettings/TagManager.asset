@@ -6,6 +6,8 @@ TagManager:
   tags:
   - UnpassableWall
   - Observer
+  - GoodBonus
+  - EssentialBonus
   layers:
   - Default
   - TransparentFX
