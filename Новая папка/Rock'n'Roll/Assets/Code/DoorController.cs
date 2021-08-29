@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RockAndRoll
 {
@@ -13,21 +11,24 @@ namespace RockAndRoll
         [SerializeField] private Transform _closedPosition;
         [SerializeField] private float _doorSpeed = 10.0f;
 
-        public void MoveDoor(bool _playerInRange)
+        public void MoveDoor(bool playerInRange, bool isLocked)
         {
             //var observer = _doorObserver.gameObject.GetComponent<DoorObserver>();
-            if (_playerInRange == true)
+            if (!isLocked)
             {
-                if (transform.position != _openPosition.position)
+                if (playerInRange == true)
                 {
-                    transform.position -= (transform.position - _openPosition.position) * _doorSpeed * Time.deltaTime;
+                    if (transform.position != _openPosition.position)
+                    {
+                        transform.position -= (transform.position - _openPosition.position) * _doorSpeed * Time.deltaTime;
+                    }
                 }
-            }
-            if (_playerInRange == false)
-            {
-                if (transform.position != _closedPosition.position)
+                if (playerInRange == false)
                 {
-                    transform.position -= (transform.position - _closedPosition.position) * _doorSpeed * Time.deltaTime;
+                    if (transform.position != _closedPosition.position)
+                    {
+                        transform.position -= (transform.position - _closedPosition.position) * _doorSpeed * Time.deltaTime;
+                    }
                 }
             }
         }
