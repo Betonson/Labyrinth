@@ -4,7 +4,7 @@ namespace RockAndRoll
 {
     public abstract class InteractiveObject : MonoBehaviour, IInteractable
     {
-        public bool IsInteractable { get; } = true;
+        public bool IsInteractable { get; set; } = true;
         protected abstract void OnEnterInteraction();
         protected abstract void OnExitInteraction();
 
