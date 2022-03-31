@@ -77,6 +77,7 @@
     <Compile Include="Assets\Code\GameMaster.cs" />
     <Compile Include="Assets\Code\InputController.cs" />
     <Compile Include="Assets\Code\InteractiveObject.cs" />
+    <Compile Include="Assets\Code\Interfaces\IData.cs" />
     <Compile Include="Assets\Code\Interfaces\IDisposable.cs" />
     <Compile Include="Assets\Code\Interfaces\IFlicker.cs" />
     <Compile Include="Assets\Code\Interfaces\IFly.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Code\Model\PlayerBall.cs" />
     <Compile Include="Assets\Code\Model\PlayerBase.cs" />
     <Compile Include="Assets\Code\Reference.cs" />
+    <Compile Include="Assets\Code\SavedData.cs" />
     <Compile Include="Assets\Code\UI controllers\DisplayBonuses.cs" />
     <Compile Include="Assets\Code\UI controllers\RestartButton.cs" />
     <Compile Include="Assets\Code\UI controllers\SceneSwitcher.cs" />
