@@ -1,23 +1,22 @@
 ﻿using UnityEngine;
 
-namespace RockAndRoll
+namespace Asteroids
 {
     public class Reference
     {
-        private PlayerBall _playerBall;
+        private PlayerShip _playerShip;
         private Camera _mainCamera;
 
-        public PlayerBall PlayerBall
+        public PlayerShip PlayerShip
         {
             get
             {
-                if (_playerBall == null)
+                if (_playerShip == null)
                 {
-                    var gameObject = Resources.Load<PlayerBall>("Player");
-                    _playerBall = Object.Instantiate(gameObject);
+                    _playerShip = Object.FindObjectOfType<PlayerShip>();
                 }
 
-                return _playerBall;
+                return _playerShip;
             }
         }
 

@@ -1,4 +1,4 @@
-﻿namespace RockAndRoll
+﻿namespace Asteroids
 {
     public interface IInitialisation
     {

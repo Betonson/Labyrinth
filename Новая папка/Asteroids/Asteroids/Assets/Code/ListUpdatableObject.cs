@@ -2,7 +2,7 @@
 using System.Collections;
 using Object = UnityEngine.Object;
 
-namespace RockAndRoll
+namespace Asteroids
 {
     public sealed class ListUpdatableObject : IEnumerator, IEnumerable
     {
@@ -12,7 +12,7 @@ namespace RockAndRoll
 
         public ListUpdatableObject()
         {
-            var interactiveObjects = Object.FindObjectsOfType<InteractiveObject>();
+            var interactiveObjects = Object.FindObjectsOfType<UpdatableObject>();
             for (var i = 0; i < interactiveObjects.Length; i++)
             {
                 if (interactiveObjects[i] is IUpdatable interactiveObject)
@@ -22,15 +22,15 @@ namespace RockAndRoll
             }
         }
 
-        public void AddUpdatableObject(IUpdatable update)
+        public void AddUpdatableObject(IUpdatable newObject)
         {
             if (_interactiveObjects == null)
             {
-                _interactiveObjects = new[] { update };
+                _interactiveObjects = new[] { newObject };
                 return;
             }
             Array.Resize(ref _interactiveObjects, Length + 1);
-            _interactiveObjects[Length - 1] = update;
+            _interactiveObjects[Length - 1] = newObject;
         }
 
         public IUpdatable this[int index]

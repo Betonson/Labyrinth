@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RockAndRoll
+namespace Asteroids
 {
     public abstract class UpdatableObject : MonoBehaviour, IUpdatable
     {
